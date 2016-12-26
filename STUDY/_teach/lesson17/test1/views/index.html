@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" href="stylesheets/base.css"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="stylesheets/html5shiv.min.js"></script>
+    <script type="text/javascript" src="stylesheets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<%- include('include/header')%>
+<div id="wrap">
+    <div class="container">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary active">学院信息</button>
+            <a href="" class="btn btn-primary" role="button">阶段管理</a>
+        </div>
+
+        <div class="jumbotron" style="margin-top: 15px;">
+            <h2 class="simhei">欢迎使用传媒学院管理系统</h2>
+
+            <p>传媒学院简介、图片...</p>
+
+        </div>
+    </div>
+</div>
+<%- include('include/footer')%>
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.box{
+    width:300px;
+    height:300px;
+    margin:100px auto;
+}
+input{
+    margin-top: 10px;
+}
+p{
+    background:#d0d0d0;
+}
+.sub{
+    border:1px solid #000088;
+    background: #000088;
+    border-radius:3px;
+    color: #ffffff;
+    margin-left:50px;
+}

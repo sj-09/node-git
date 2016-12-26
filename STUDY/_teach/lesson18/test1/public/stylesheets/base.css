@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+#footer {
+    height: 60px;
+    background-color: #3276B1;
+}
+
+#footer .credit {
+    margin: 20px 0;
+}
+
+.text-muted {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-family: simHei;
+}
+
+.simhei {
+    font-family: simHei;
+}
+
+.modal-header {
+    padding: 10px;
+}
+
+.modal-body {
+    padding: 0px;
+}
+
+body {
+    padding-top: 70px;
+}
+
+/* reset the styles for my theme */
+
+.navbar-default {
+    background-color: #3276B1;
+    border-color: white;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: white;
+    border-bottom-color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #3276B1;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: white;
+}
+
+.navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret {
+    border-top-color: #000;
+    border-bottom-color: #000;
+}

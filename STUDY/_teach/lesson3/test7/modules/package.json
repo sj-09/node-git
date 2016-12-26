@@ -1,0 +1,13 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "modules test package json",
+  "main": "modules.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm install moudules"
+  },
+  "author": "haonan",
+  "license": "ISC"
+}

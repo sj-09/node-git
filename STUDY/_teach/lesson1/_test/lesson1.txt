@@ -1,0 +1,40 @@
+什么是nodejs?
+Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境
+( ps: v8是一个运行环境，类似php的运行环境,V8引擎执行Javascript的速度非常快，性能非常好）
+Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。
+
+
+nodejs 的特点
+
+1、单线程
+Node.js 是单进程单线程应用程序，通过事件和回调支持并发，所以性能非常高。
+Node.js 的每一个 API 都是异步的，并作为一个独立线程运行，使用异步函数调用，并处理并发。
+
+2、异步I/O
+I: input   输入
+O:output   输出
+
+3、事件与回调函数
+Node.js 使用事件驱动模型，当web server接收到请求，就把它关闭然后进行处理，然后去服务下一个web请求。
+当这个请求完成，它被放回处理队列，当到达队列开头，这个结果被返回给用户。
+这个模型非常高效可扩展性非常强，因为webserver一直接受请求而不等待任何读写操作。（这也被称之为非阻塞式IO或者事件驱动IO）
+在事件驱动模型中，会生成一个主循环来监听事件，当检测到事件时触发回调函数。
+
+4、跨平台
+
+Windows OS Linux,支持多种平台
+
+
+如何运行nodejs 
+方法1、
+C:\Users\Nan>node
+> console.log('123')
+123
+undefined
+>
+方法2、
+//index.js
+console.log("hello world!");
+node index.js
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>this is client,index page</div>
+<button id="btn">get json</button>
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#btn').on('click', function () {
+        //方法一：
+        $.get('http://localhost:8080/getUser', function (data) {
+            console.log(data);
+        }, 'jsonp');
+
+//        方法二：
+//        $.ajax({
+//            url: 'http://localhost:8080/getUser',
+//            data: {name: 'haonan', pswd: '12344321'},
+//            dataType: 'jsonp',
+//            method: 'post',
+//            success: function (data) {
+//                console.log(data);
+//            },
+//            error: function (err) {
+//                console.log(err);
+//            }
+//        });
+    });
+
+
+</script>
+</body>
+</html>

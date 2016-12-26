@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="stylesheets/search.css">
+	<script src="javascripts/jquery-1.8.0.js"></script>
+</head>
+<body>
+<div id="big">
+	<p><button id="ren">个人</button><input type="text" name="word" id="user"><button id="btn">X</button><button id="search">搜索</button></p>
+	<div id="cont">
+	</div>
+</div>
+	<script>
+
+		$(function(){
+			$("#search").on("click",function(){
+				$.ajax({
+					url:"http://localhost:3000/login",
+					type:"post",
+					data:{"word":$("#user").val()},
+					success:function(e){
+						console.log(e.length)
+						console.log(e[0].sname)
+						var str="";
+						for(var i=0;i<e.length;i++){
+							str+="<p>"+e[i].name+"</p>"
+						}
+						$("#cont").html(str)
+					}
+				})
+			})
+			$("#btn").on("click",function(){
+				$("#cont").html("");
+				$("#user").val("")
+			})
+
+		})
+	</script>
+</body>
+</html>

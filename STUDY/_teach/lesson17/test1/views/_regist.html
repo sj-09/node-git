@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" href="stylesheets/base.css"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="stylesheets/html5shiv.min.js"></script>
+    <script type="text/javascript" src="stylesheets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<%- include('include/header')%>
+<div id="wrap">
+
+    <div class="container">
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>用户注册</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="user" class="col-sm-3 control-label">用户名：</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" name="user" class="form-control" id="user"
+                                           placeholder="请输入你的用户名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pswd" class="col-sm-3 control-label">密码：</label>
+
+                                <div class="col-sm-9">
+                                    <input type="password" name="pswd" class="form-control" id="pswd"
+                                           placeholder="请输入你的密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pswd" class="col-sm-3 control-label">密码确认：</label>
+
+                                <div class="col-sm-9">
+                                    <input name="rpswd" type="password" class="form-control" id="rpswd"
+                                           placeholder="请再次输入你的密码">
+                                </div>
+                                <div>
+                                    <span><%= error %></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer panel-primary">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-3">
+                                <input id="submitBtn" value="注册" type="submit" class="btn btn-primary btn-block"/>
+                            </div>
+                            <div class="col-md-3">
+                                <input id="resetBtn" value="清空" type="button" class="btn btn-default btn-block"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('include/footer')%>
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<script type="text/javascript">
+    $('#submitBtn').on('click', function () {
+        var data = {
+            user: $('#user').val(),
+            pswd: $('#pswd').val(),
+            rpswd: $('#rpswd').val()
+        };
+        $.ajax({
+            type: "POST",
+            url: "/reg",
+            dataType: 'json',
+            data: data,
+            success: function (res) {
+                if (res.errCode == 0 && res.isSuccess) {
+                    console.log(res.data);
+                    //location.href = "http://localhost:8080/home";
+                } else {
+                    alert('shibai');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

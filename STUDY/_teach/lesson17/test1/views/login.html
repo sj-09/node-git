@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" href="stylesheets/base.css"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="stylesheets/html5shiv.min.js"></script>
+    <script type="text/javascript" src="stylesheets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<%- include('include/header')%>
+<div id="wrap">
+
+    <div class="container">
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>系统登录</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form action="login" method="post" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="user" class="col-sm-3 control-label">用户名：</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" name="user" class="form-control" id="user"
+                                           placeholder="请输入你的用户名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pswd" class="col-sm-3 control-label">密码：</label>
+
+                                <div class="col-sm-9">
+                                    <input name="pswd" type="password" class="form-control" id="pswd"
+                                           placeholder="请输入你的密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> 记住账号
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer panel-primary">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-3">
+                                <input id="submitBtn" value="登录" type="button" class="btn btn-primary btn-block"/>
+                            </div>
+                            <div class="col-md-3">
+                                <input id="resetBtn" value="清空" type="button" class="btn btn-default btn-block"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('include/footer')%>
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<script src="javascripts/userlogin.js"></script>
+</body>
+</html>

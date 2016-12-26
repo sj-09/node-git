@@ -1,0 +1,34 @@
+中间件
+Express里有个中间件（middleware）的概念。所谓中间件，就是在收到请求后和发送响应之前这个阶段执行的一些函数。
+
+要在一条路由的处理链上插入中间件，可以使用express对象的use方法。该方法原型如下：
+
+app.use([path,] function [, function...])
+当app.use没有提供path参数时，路径默认为“/”。当你为某个路径安装了中间件，则当以该路径为基础的路径被访问时，都会应用该中间件。比如你为“/abcd”设置了中间件，那么“/abcd/xxx”被访问时也会应用该中间件。
+
+app.use('/abcd', function (req, res, next) {
+  console.log(req.baseUrl);
+  next();
+})
+
+
+app.static中间件
+
+express.static(root, [options])
+第一个参数root，是要处理的静态资源的根目录，可以是绝对路径，也可以是相对路径
+第二个可选参数用来指定一些选项，比如maxAge、lastModified等
+
+
+var options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  index: false,
+  maxAge: '1d',
+  redirect: false,
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now());
+  }
+}
+
+app.use(express.static('public', options));

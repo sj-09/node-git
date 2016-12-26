@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn">get json</button>
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript">
+    var user = {name: 'haonan', age: '18'};
+    $('#btn').on('click', function () {
+        $.ajax({
+            url: 'http://localhost:8080/postJson',
+            dataType: 'jsonp',
+            data: user,
+            success: function (result) {
+                console.log(result);
+            }
+        });
+    });
+</script>
+</body>
+</html>

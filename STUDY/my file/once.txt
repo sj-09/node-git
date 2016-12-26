@@ -1,0 +1,4 @@
+function (err,data){
+         console.log("write success")
+
+    }

@@ -1,0 +1,2 @@
+var path_join = path.join('./views', request.url);
+var path_normalize = path.normalize('./views'+request.url);

@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\NodeJS\\node\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\NodeJS\\node\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'node-master.zip' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink D:\NodeJS\node\nodejs\\node.exe
+5 verbose cache add [ 'node-master.zip', null ]
+6 verbose cache add name=undefined spec="node-master.zip" args=["node-master.zip",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'node-master.zip',
+7 verbose parsed url   path: 'node-master.zip',
+7 verbose parsed url   href: 'node-master.zip' }
+8 silly lockFile dae6924f-node-master-zip node-master.zip
+9 verbose lock node-master.zip D:\NodeJS\node\npm-cache\dae6924f-node-master-zip.lock
+10 verbose chmod C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz 644
+11 verbose tar unpack C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz
+12 silly lockFile 4be2b7fd-301-0-009224289795383811-package tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\package
+13 verbose lock tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\package D:\NodeJS\node\npm-cache\4be2b7fd-301-0-009224289795383811-package.lock
+14 silly lockFile 18549760-301-0-009224289795383811-tmp-tgz tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz
+15 verbose lock tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz D:\NodeJS\node\npm-cache\18549760-301-0-009224289795383811-tmp-tgz.lock
+16 silly gunzTarPerm modes [ '755', '644' ]
+17 error not a package C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz
+18 silly lockFile 4be2b7fd-301-0-009224289795383811-package tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\package
+19 silly lockFile 4be2b7fd-301-0-009224289795383811-package tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\package
+20 silly lockFile 18549760-301-0-009224289795383811-tmp-tgz tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz
+21 silly lockFile 18549760-301-0-009224289795383811-tmp-tgz tar://C:\Users\sunjian\AppData\Local\Temp\npm-48616-vQIwCi5Y\1478829792301-0.009224289795383811\tmp.tgz
+22 silly lockFile dae6924f-node-master-zip node-master.zip
+23 silly lockFile dae6924f-node-master-zip node-master.zip
+24 verbose addNamed [ 'node-master.zip', '' ]
+25 verbose addNamed [ null, '*' ]
+26 silly lockFile 4e9d01f9-node-master-zip node-master.zip@
+27 verbose lock node-master.zip@ D:\NodeJS\node\npm-cache\4e9d01f9-node-master-zip.lock
+28 silly addNameRange { name: 'node-master.zip', range: '*', hasData: false }
+29 verbose url raw node-master.zip
+30 verbose url resolving [ 'http://registry.npm.taobao.org/', './node-master.zip' ]
+31 verbose url resolved http://registry.npm.taobao.org/node-master.zip
+32 info trying registry request attempt 1 at 10:03:24
+33 http GET http://registry.npm.taobao.org/node-master.zip
+34 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+35 info trying registry request attempt 2 at 10:03:34
+36 http GET http://registry.npm.taobao.org/node-master.zip
+37 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+38 info trying registry request attempt 3 at 10:04:34
+39 http GET http://registry.npm.taobao.org/node-master.zip
+40 silly lockFile 4e9d01f9-node-master-zip node-master.zip@
+41 silly lockFile 4e9d01f9-node-master-zip node-master.zip@
+42 error network getaddrinfo ENOTFOUND
+42 error network This is most likely not a problem with npm itself
+42 error network and is related to network connectivity.
+42 error network In most cases you are behind a proxy or have bad network settings.
+42 error network
+42 error network If you are behind a proxy, please make sure that the
+42 error network 'proxy' config is set properly.  See: 'npm help config'
+43 error System Windows_NT 6.2.9200
+44 error command "D:\\NodeJS\\node\\nodejs\\\\node.exe" "D:\\NodeJS\\node\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "node-master.zip"
+45 error cwd D:\NodeJS\SUNjian\_teach\lesson11\_note
+46 error node -v v0.10.26
+47 error npm -v 1.4.3
+48 error syscall getaddrinfo
+49 error code ENOTFOUND
+50 error errno ENOTFOUND
+51 verbose exit [ 1, true ]

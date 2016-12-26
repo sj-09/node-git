@@ -1,0 +1,31 @@
+Stream（数据流）
+
+当内存中无法一次装下需要处理的数据时，或者一边读取一遍处理更加高效时，我们就需要用到数据流。NodeJS通过各种Stream来提供对数据流的操作，在大文件拷贝时，可以为数据来源创建一个只读数据流，
+	
+
+var rs = fs.createReadStream(pathName);
+
+rs.on('data', function(chunk) {
+    doSomething(chunk);
+});
+
+
+
+
+rs.on('end', function() {
+    cleanUp();
+});
+
+上边的代码中data事件会源源不断地被触发，不管doSomet吧hing()函数是否处理得过来。代码可以继续作如下改造，以解决这个问题：
+var rs = fs.createReadStream(src);
+
+rs.on('data', function(chunk) {
+    rs.pause();
+    doSomething(chunk, function() {
+        rs.resume();
+    });
+});
+
+rs.on('end', function() {
+    cleanUp();
+});
